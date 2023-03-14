@@ -4,19 +4,19 @@ In the last project, the app displayed 3 different screens using context. It cou
 
 Here are screens showing the new version of this app:
 
-context-edit-1.PNG     context-edit-2.PNG
+![context-edit-1.PNG](https://github.com/bell-kevin/useContextRegistrationInputValidation/blob/main/readMePictures/context-edit-1.PNG)     ![context-edit-2.PNG](https://github.com/bell-kevin/useContextRegistrationInputValidation/blob/main/readMePictures/context-edit-2.PNG)
 
  
 
-context-edit-3.PNG     context-edit-4.PNG
+![context-edit-3.PNG](https://github.com/bell-kevin/useContextRegistrationInputValidation/blob/main/readMePictures/context-edit-3.PNG)     ![context-edit-4.PNG](https://github.com/bell-kevin/useContextRegistrationInputValidation/blob/main/readMePictures/context-edit-4.PNG)
 
  
 
-context-edit-5.PNG
+![context-edit-5.PNG](https://github.com/bell-kevin/useContextRegistrationInputValidation/blob/main/readMePictures/context-edit-5.PNG)
 
 Below are the alerts that will display when the user presses the buttons, the "Yes" alert on the left, the "No" alert on the right. Notice that you can see the first screen behind the alert boxes -- when the button is pressed, it navigates to the top of the stack, and that screen is barely visible behind the alert box.
 
-context-edit-6.PNG     context-edit-7.PNG
+![context-edit-6.PNG](https://github.com/bell-kevin/useContextRegistrationInputValidation/blob/main/readMePictures/context-edit-6.PNG)     ![context-edit-7.PNG](https://github.com/bell-kevin/useContextRegistrationInputValidation/blob/main/readMePictures/context-edit-7.PNG)
 
  
 
