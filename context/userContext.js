@@ -32,4 +32,4 @@ function UserContextProvider({ children }) {
   );
 }
 
-export default UserContext;
+export { UserContext, UserContextProvider };
