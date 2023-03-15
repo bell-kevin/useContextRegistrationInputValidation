@@ -1,11 +1,12 @@
 import React, { useContext } from 'react';
 import { View, Text, StyleSheet, TextInput, Button } from 'react-native';
-import UserContext from '../context/userContext';
+import { UserContext } from '../context/userContext';
 
 const NameScreen = ({ navigation }) => {
   const { firstName, lastName, setFirstName, setLastName } = useContext(UserContext);
 
   const handleFirstNameChange = (text) => {
+    console.log(setFirstName);
     setFirstName(text);
   };
 
