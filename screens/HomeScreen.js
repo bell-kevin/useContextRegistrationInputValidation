@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import  UserContext  from '../context/userContext';
+import { UserContext } from '../context/userContext';
 
 export default function HomeScreen() {
   const navigation = useNavigation();
