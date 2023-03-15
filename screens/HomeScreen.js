@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import { UserContext } from '../context/userContext';
+import  UserContext  from '../context/userContext';
 
 export default function HomeScreen() {
   const navigation = useNavigation();
@@ -48,7 +48,6 @@ export default function HomeScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'lightgrey',
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: 'black',
@@ -78,20 +77,20 @@ const styles = StyleSheet.create({
   buttonName: {
     backgroundColor: 'cornflowerblue',
     paddingVertical: 10,
-    paddingHorizontal: 70,
+    paddingHorizontal: 68,
     width: '100%',
   },
   buttonPhone: {
     backgroundColor: 'forestgreen',
     paddingVertical: 10,
-    paddingHorizontal: 60,
+    paddingHorizontal: 67,
     width: '100%',
     marginVertical: 20,
   },
   buttonEmail: {
     backgroundColor: 'red',
     paddingVertical: 10,
-    paddingHorizontal: 60,
+    paddingHorizontal: 70,
     width: '100%',
   },
 });
