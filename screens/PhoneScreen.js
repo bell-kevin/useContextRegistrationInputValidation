@@ -21,7 +21,7 @@ const PhoneScreen = ({ navigation }) => {
       />
       <Button
         title="Next"
-        onPress={() => navigation.navigate('EmailScreen')}
+        onPress={() => navigation.navigate('Email')}
       />
     </View>
   );
