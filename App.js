@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import UserContextProvider from './context/userContext';
+import { UserContextProvider } from './context/userContext';
 
 import HomeScreen from './screens/HomeScreen';
 import NameScreen from './screens/NameScreen';
@@ -13,6 +13,7 @@ const Stack = createStackNavigator();
 
 export default function App() {
   return (
+      <UserContextProvider>
       <NavigationContainer>
         <Stack.Navigator
           initialRouteName="Registration"
@@ -32,5 +33,6 @@ export default function App() {
           <Stack.Screen name="Validation" component={ValidationScreen} />
         </Stack.Navigator>
       </NavigationContainer>
+      </UserContextProvider>
   );
 }
