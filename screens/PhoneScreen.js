@@ -1,14 +1,28 @@
 import React, { useContext } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, TextInput, Button } from 'react-native';
 import UserContext from '../context/userContext';
 
-const PhoneScreen = () => {
+const PhoneScreen = ({ navigation }) => {
   const userNameCtx = useContext(UserContext);
+
+  const setPhone = (phone) => {
+    userNameCtx.setPhone(phone);
+  }
 
   return (
     <View style={styles.container}>
-      <Text style={styles.header}>Verify your phone</Text>
-      <Text style={styles.text}>{userNameCtx.phone}</Text>
+      <Text style={styles.header}>Enter your phone</Text>
+      <TextInput
+        style={styles.input}
+        placeholder="Phone number"
+        keyboardType="numeric"
+        value={userNameCtx.phone}
+        onChangeText={setPhone}
+      />
+      <Button
+        title="Next"
+        onPress={() => navigation.navigate('EmailScreen')}
+      />
     </View>
   );
 };
@@ -26,7 +40,14 @@ const styles = StyleSheet.create({
     marginBottom: 16,
     color: 'darkgreen',
   },
-  text: {
+  input: {
+    width: '80%',
+    height: 40,
+    borderWidth: 1,
+    borderColor: 'darkgreen',
+    borderRadius: 5,
+    padding: 10,
+    marginBottom: 16,
     fontSize: 18,
     color: 'darkgreen',
   },
