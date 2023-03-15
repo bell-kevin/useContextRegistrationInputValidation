@@ -1,12 +1,12 @@
 import React, { useContext } from 'react';
 import { View, Text, StyleSheet, TextInput, Button } from 'react-native';
-import UserContext from '../context/userContext';
+import { UserContext } from '../context/userContext';
 
 const PhoneScreen = ({ navigation }) => {
-  const userNameCtx = useContext(UserContext);
+  const userContext = useContext(UserContext);
 
   const setPhone = (phone) => {
-    userNameCtx.setPhone(phone);
+    userContext.setPhone(phone);
   }
 
   return (
@@ -16,7 +16,7 @@ const PhoneScreen = ({ navigation }) => {
         style={styles.input}
         placeholder="Phone number"
         keyboardType="numeric"
-        value={userNameCtx.phone}
+        value={userContext.phone}
         onChangeText={setPhone}
       />
       <Button
