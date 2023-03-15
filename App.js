@@ -13,9 +13,7 @@ const Stack = createStackNavigator();
 
 export default function App() {
   return (
-    <UserContextProvider>
       <NavigationContainer>
-
         <Stack.Navigator
           initialRouteName="Registration"
           screenOptions={{
@@ -33,8 +31,6 @@ export default function App() {
           <Stack.Screen name="Email" component={EmailScreen} />
           <Stack.Screen name="Validation" component={ValidationScreen} />
         </Stack.Navigator>
-
       </NavigationContainer>
-    </UserContextProvider>
   );
 }
