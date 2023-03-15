@@ -1,14 +1,37 @@
 import React, { useContext } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, TextInput, Button } from 'react-native';
 import UserContext from '../context/userContext';
 
-const NameScreen = () => {
-  const userNameCtx = useContext(UserContext);
+const NameScreen = ({ navigation }) => {
+  const { firstName, lastName, setFirstName, setLastName } = useContext(UserContext);
+
+  const handleFirstNameChange = (text) => {
+    setFirstName(text);
+  };
+
+  const handleLastNameChange = (text) => {
+    setLastName(text);
+  };
 
   return (
     <View style={styles.contentContainer}>
-      <Text style={styles.textContent}>Verify your name</Text>
-      <Text style={styles.text}>{userNameCtx.firstName} {userNameCtx.lastName}</Text>
+      <Text style={styles.textContent}>Enter your name</Text>
+      <TextInput
+        style={styles.textInput}
+        placeholder="First Name"
+        value={firstName}
+        onChangeText={handleFirstNameChange}
+      />
+      <TextInput
+        style={styles.textInput}
+        placeholder="Last Name"
+        value={lastName}
+        onChangeText={handleLastNameChange}
+      />
+      <Button
+        title="Next"
+        onPress={() => navigation.navigate("Phone")}
+      />
     </View>
   );
 };
@@ -26,9 +49,14 @@ const styles = StyleSheet.create({
     marginBottom: 16,
     color: 'blue',
   },
-  text: {
+  textInput: {
+    height: 40,
+    width: '80%',
+    borderWidth: 1,
+    borderColor: 'blue',
+    marginVertical: 8,
+    paddingHorizontal: 10,
     fontSize: 18,
-    color: 'blue',
   },
 });
 
