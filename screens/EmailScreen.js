@@ -22,7 +22,7 @@ const EmailScreen = ({ navigation }) => {
       />
       <Button
         title="Next"
-        onPress={() => navigation.navigate('ValidationScreen')}
+        onPress={() => navigation.navigate('Validation')}
       />
     </View>
   );
