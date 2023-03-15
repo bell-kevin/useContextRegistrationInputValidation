@@ -1,14 +1,14 @@
 import React, { useContext, useState } from 'react';
 import { View, Text, StyleSheet, TextInput, Button } from 'react-native';
-import UserContext from '../context/userContext';
+import { UserContext } from '../context/userContext';
 
 const EmailScreen = ({ navigation }) => {
   const [email, setEmail] = useState('');
-  const userNameCtx = useContext(UserContext);
+  const userContext = useContext(UserContext);
 
   const handleEmailChange = (email) => {
     setEmail(email);
-    userNameCtx.setEmail(email);
+    userContext.setEmail(email);
   };
 
   return (
@@ -18,6 +18,7 @@ const EmailScreen = ({ navigation }) => {
         style={styles.input}
         placeholder="example@example.com"
         value={email}
+        keyboardType="email-address"
         onChangeText={handleEmailChange}
       />
       <Button
