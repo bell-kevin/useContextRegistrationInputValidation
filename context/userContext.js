@@ -1,8 +1,9 @@
+import React from "react";
 import { createContext } from "react";
 import { useState } from "react";
-import { KeyboardAvoidingView } from "react-native";
 
-const UserContext = createContext({
+
+const UserContext = React.createContext({
   firstName: "",
   lastName: "",
   phone: "",
@@ -16,14 +17,14 @@ function UserContextProvider({ children }) {
   const [email, setEmail] = useState("");
 
   const value = {
-    firstName: 'Kevin',
-    lastName: 'Bell',
-    phone: '801-456-7890',
-    email: 'bellKevin@pm.me',
-    setFirstName: 'Kevin',
-    setLastName: 'Bell',
-    setPhone: '801-456-7890',
-    setEmail: 'bellKevin@pm.me',
+    firstName,
+    lastName,
+    phone,
+    email,
+    setFirstName,
+    setLastName,
+    setPhone,
+    setEmail,
   };
 
   return (
@@ -31,4 +32,4 @@ function UserContextProvider({ children }) {
   );
 }
 
-export default UserContextProvider;
+export default UserContext;
