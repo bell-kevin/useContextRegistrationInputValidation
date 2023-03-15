@@ -1,14 +1,29 @@
-import React, { useContext } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import React, { useContext, useState } from 'react';
+import { View, Text, StyleSheet, TextInput, Button } from 'react-native';
 import UserContext from '../context/userContext';
 
-const EmailScreen = () => {
+const EmailScreen = ({ navigation }) => {
+  const [email, setEmail] = useState('');
   const userNameCtx = useContext(UserContext);
+
+  const handleEmailChange = (email) => {
+    setEmail(email);
+    userNameCtx.setEmail(email);
+  };
 
   return (
     <View style={styles.container}>
-      <Text style={styles.header}>Verify your email</Text>
-      <Text style={styles.text}>{userNameCtx.email}</Text>
+      <Text style={styles.header}>Enter your email</Text>
+      <TextInput
+        style={styles.input}
+        placeholder="example@example.com"
+        value={email}
+        onChangeText={handleEmailChange}
+      />
+      <Button
+        title="Next"
+        onPress={() => navigation.navigate('ValidationScreen')}
+      />
     </View>
   );
 };
@@ -26,9 +41,14 @@ const styles = StyleSheet.create({
     marginBottom: 16,
     color: 'darkred',
   },
-  text: {
-    fontSize: 18,
-    color: 'darkred',
+  input: {
+    height: 40,
+    width: '80%',
+    borderWidth: 1,
+    borderColor: 'darkred',
+    borderRadius: 5,
+    paddingHorizontal: 10,
+    marginBottom: 16,
   },
 });
 
